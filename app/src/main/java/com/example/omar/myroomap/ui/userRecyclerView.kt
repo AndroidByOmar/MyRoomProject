@@ -31,6 +31,7 @@ class UserRecyclerView() :RecyclerView.Adapter<UserRecyclerView.UserViewHolder>(
       val user:User= userlist[position]
         //holder.bind(user)
         holder.iv_Name.text=user.name
+        holder.tv_show.setImageResource(user.image)
         holder.tv_message.text=user.message
     }
 
@@ -39,7 +40,7 @@ class UserRecyclerView() :RecyclerView.Adapter<UserRecyclerView.UserViewHolder>(
     }
     //custom class to hold attribute
    inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+       val tv_show =itemView.findViewById<ImageView>(R.id.tv_show)
        val iv_Name = itemView.findViewById<TextView>(R.id.tv_Name)
        val tv_message = itemView.findViewById<TextView>(R.id.tvMessage)
 

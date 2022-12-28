@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         btnAdd.setOnClickListener {
             userlist.add(User("Omar",
-                txt_message.text.toString()
+                txt_message.text.toString(),
+                R.drawable.mo
 
             ))
             userRecyclerView.setlist(userlist)
